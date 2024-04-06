@@ -1,0 +1,389 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient( to right,
+    #171717,
+    #6c0f68,
+    #171717
+    );
+    background-color: black;
+    overflow-x: hidden;
+}
+/*menu*/
+.menu{
+    background-color: black;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding:10px 10px;
+    color: white;
+  
+
+    
+}
+
+/*menu burger*/
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 27%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background: linear-gradient( to bottom right, rgb(42, 42, 125), rgb(66, 66, 160)
+    );
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+  border-radius: 0px 0px 12px 0px;
+  
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+  border-radius: 0px 0px 12px 0px;
+  color: black;
+}
+
+
+.page{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+    font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  
+}
+
+nav ul div a {
+  color: white;
+  text-decoration: none;
+}
+
+#hp{
+    font-style: oblique;
+    color: gold;
+    font-size: 300%;
+    display: flex;
+    justify-content: space-evenly;
+    animation-duration: 4s;
+    animation-name: apparitionDeGaucheADroite;
+    align-items: center;
+    
+}
+@keyframes apparitionDeGaucheADroite {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+      
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      
+    }
+  }
+
+#harry_jeune {
+  z-index: -1;
+  height: 100px;
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+}
+
+#harry_ado{
+  height: 100px;
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+}
+
+.image{
+  
+    display: flex;
+    flex-direction: row;
+    animation-duration: 4s;
+    animation-name: apparition;
+    
+}
+
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+        
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(100);
+        
+      }
+  }
+
+#harry{
+    width: 588px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#harry2{
+    
+    width: 675px;
+    height: 100%;
+    overflow: hidden;
+}
+/*section 2*-----------------------*/
+#titre{
+    color: red;
+    font-style: oblique;
+    font-size: 200%;
+    background-color: black;
+    width: auto;
+    height: 10vh;
+    padding:10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenu_un{
+  display: flex;
+}
+
+#partie_un{
+    width: 675px;
+    height: 100%;
+    overflow: hidden;
+}
+
+#p1{
+  color: white;
+  width: auto;
+  display: flex;
+  text-align: justify;
+  padding: 20px;
+  align-items: center;
+}
+/*section 3*/
+#nom{
+  color: green;
+  font-style: oblique;
+  font-size: 200%;
+  background-color: black;
+  width: auto;
+  height: 10vh;
+  padding:10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenu_deux{
+  display: flex;
+  height: 80vh;
+}
+
+#partie_deux{
+    width: 730px;
+    height: 100%;
+    overflow: hidden;
+}
+
+#p2{
+  color: white;
+  width: auto;
+  display: flex;
+  text-align: justify;
+  padding: 20px;
+  align-items: center;
+}
+
+
+/*section 4-----------------*/
+#other{
+  color: orange;
+  font-style: oblique;
+  font-size: 200%;
+  background-color: black;
+  width: auto;
+  height: 10vh;
+  padding:10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+.autre{
+  margin-bottom: -1%;
+  padding: 0;
+  position: relative;
+  height: 100%;
+}
+
+
+#final_combat img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*mes bouttons*/
+div a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.lien{
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+  font-size: auto;
+}
+
+
+#bouton_deux{
+  border-radius:20px ;
+  box-shadow: 0 0 10px rgba(1, 1, 1, 1);
+  color: white;
+  padding: 15px 15px;
+}
+
+#bouton_deux:hover{
+  transform: scale(1.125);
+    transition: all .3s ease;
+}
+
+
+
+/*footer*/
+
+
+.fin{
+    
+  background: linear-gradient( to right,
+  #171717,
+  gray,
+  #171717
+  );
+    color: beige;
+    text-align: center;
+    height: auto;
+    margin-bottom: -1%;
+    
+}
+
+#contact{/*titre contact*/
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  height:10vh;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-style: oblique;
+}
+
+.tout{
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+.tel{
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  text-shadow: 0px 0px 10px white;
+}
+
+
+
+.mail{
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0px 0px 10px white;
+}
+
+.insta{
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0px 0px 10px white;
+}
+
+.lieux{
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0px 0px 10px white;
+}
